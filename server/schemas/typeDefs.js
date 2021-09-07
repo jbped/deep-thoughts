@@ -9,13 +9,6 @@ const typeDefs = gql`
         thoughts: [Thought]
         friends: [User]
     }    
-    
-    type Query {
-        users: [User]
-        user(username: String!): User
-        thoughts(username: String): [Thought]
-        thought(_id: ID!): Thought
-    }
 
     type Thought {
         _id: ID
@@ -31,10 +24,6 @@ const typeDefs = gql`
         reactionBody: String
         createdAt: String
         username: String
-    }
-
-    type Query {
-        thoughts(username: String): [Thought]
     }
 
     type Mutation {
